@@ -2,10 +2,12 @@ plugins {
 	id 'org.springframework.boot' version '2.1.4.RELEASE'
 	id 'java'
 	id 'jacoco'
+	id 'checkstyle'
 }
 
 apply plugin: 'io.spring.dependency-management'
 apply plugin: 'jacoco' 
+apply plugin: 'checkstyle'
 
 
 group = 'com.woita'

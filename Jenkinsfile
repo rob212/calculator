@@ -22,5 +22,10 @@ pipeline {
                 sh "./gradlew test jacocoTestCoverageVerification"
             }
         }
+        stage("Static code analysis") {
+            steps {
+                sh "./gradlew checkstyleMain"
+            }
+        }
     }
 }
