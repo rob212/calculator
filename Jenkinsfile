@@ -1,5 +1,5 @@
 pipeline {
-    agent-java
+    agent "agent-java"
     stages {
         stage("Compile") {
             steps {
