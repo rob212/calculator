@@ -32,5 +32,20 @@ pipeline {
                 ])
             }
         }
+        stage("Docker build") {
+            steps {
+
+            }
+        }
+        stage('Docker push') {
+            steps {
+
+            }
+        }
+        stage('Acceptance tests') {
+            steps {
+                
+            }
+        }
     }
 }
