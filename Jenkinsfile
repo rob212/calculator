@@ -32,9 +32,14 @@ pipeline {
                 ])
             }
         }
+        stage('Package') {
+            steps {
+                sh "./gradlew build"
+            }
+        }
         stage("Docker build") {
             steps {
-
+                sh "docker build -t rob212/calculator ."
             }
         }
         stage('Docker push') {
