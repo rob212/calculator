@@ -44,7 +44,7 @@ pipeline {
         }
         stage('Docker push') {
             steps {
-
+                sh "docker push rob212/calculator"
             }
         }
         stage('Acceptance tests') {
