@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { node { label 'agent-java'}}
     stages {
         stage("Compile") {
             steps {
@@ -30,6 +30,21 @@ pipeline {
                     reportFiles: 'main.html',
                     reportName: "Checkstyle Static Code Analysis Report"
                 ])
+            }
+        }
+        stage("Docker build") {
+            steps {
+
+            }
+        }
+        stage('Docker push') {
+            steps {
+
+            }
+        }
+        stage('Acceptance tests') {
+            steps {
+                
             }
         }
     }
