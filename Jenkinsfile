@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { node { label 'docker'}}
     stages {
         stage("Compile") {
             steps {
