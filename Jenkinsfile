@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { docker { image 'rob212/jenkins-java-git-slave'}}
     stages {
         stage("Compile") {
             steps {
