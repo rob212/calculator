@@ -44,7 +44,10 @@ pipeline {
         }
         stage('Docker push') {
             steps {
-                sh "docker push rob212/calculator"
+                withCredentials([usernamePassword(credentialsId: 'docker-hub', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+                    sh "docker login -u=$USERNAME -p=$PASSWORD"
+                    sh "docker push rob212/calculator"
+                }
             }
         }
     }
