@@ -3,11 +3,10 @@
 "-//Puppy Crawl//DTD Check Configuration 1.2//EN"
 "http://www.puppycrawl.com/dtds/configuration_1_2.dtd">
 
-<!-- This rule checks that public classes, intefaces and enums are documented with Javadocs. If not the build will fail-->
 <module name="Checker">
     <module name="TreeWalker">
-        <module name="JavadocType">
-            <property name="scope" value="public"/>
+        <module name="MethodLength">
+            <property name="max" value="2"/>
         </module>
-    </module>
+     </module>
 </module>
